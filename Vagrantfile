@@ -8,7 +8,7 @@ Vagrant.configure('2') do |config|
   config.vm.provision :shell, path: 'install-ruby.sh', args: '2.2.2 bundler', privileged: false
   
   config.vm.provider "virtualbox" do |v|
-    v.memory = 1024
-    v.cpus = 2
+    v.memory = 2048
+    v.cpus = 4
   end
 end

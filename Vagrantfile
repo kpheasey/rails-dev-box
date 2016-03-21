@@ -2,9 +2,9 @@
 # vi: set ft=ruby :
 Vagrant.configure('2') do |config|
   config.vm.box      = 'ubuntu/trusty64'
-  config.ssh.forward_agent = true
 
   # Port Forwarding
+  config.ssh.forward_agent = true
   config.vm.network :forwarded_port, guest: 3000, host: 3000 # Rails
   config.vm.network :forwarded_port, guest: 1080, host: 1080 # Mailcatcher
   
